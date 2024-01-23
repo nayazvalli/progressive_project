@@ -1,6 +1,7 @@
 package com.wecp.progressive.entity;
 
 public class Accounts {
+<<<<<<< HEAD
     private int account_id;
     private int customer_id;
     private double balance;
@@ -35,4 +36,7 @@ public class Accounts {
         return "Accounts [account_id=" + account_id + ", customer_id=" + customer_id + ", balance=" + balance + "]";
     }
     
+=======
+
+>>>>>>> b0d4aae7d3e8f96795d0c3eb59a6d83be83ae77f
 }

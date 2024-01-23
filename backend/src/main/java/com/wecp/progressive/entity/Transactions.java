@@ -4,6 +4,7 @@ import java.util.Date;
 
 public class Transactions {
 
+<<<<<<< HEAD
     private int transaction_id;
     private int account_id;
     private double amount;
@@ -55,4 +56,7 @@ public class Transactions {
                 + ", transaction_date=" + transaction_date + ", transaction_type=" + transaction_type + "]";
     }
     
+=======
+
+>>>>>>> b0d4aae7d3e8f96795d0c3eb59a6d83be83ae77f
 }

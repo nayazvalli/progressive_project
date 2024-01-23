@@ -3,6 +3,7 @@ package com.wecp.progressive.entity;
 
 
 public class Customers {
+<<<<<<< HEAD
     private int customer_id;
     private String name;
     private String email;
@@ -62,4 +63,7 @@ public class Customers {
                 + username + ", password=" + password + ", role=" + role + "]";
     }
     
+=======
+
+>>>>>>> b0d4aae7d3e8f96795d0c3eb59a6d83be83ae77f
 }
