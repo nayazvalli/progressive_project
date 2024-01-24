@@ -2,8 +2,7 @@ package com.wecp.progressive.entity;
 
 
 
-public class Customers {
-<<<<<<< HEAD
+public class Customers implements Comparable<Customers>{
     private int customer_id;
     private String name;
     private String email;
@@ -62,8 +61,10 @@ public class Customers {
         return "Customers [customer_id=" + customer_id + ", name=" + name + ", email=" + email + ", username="
                 + username + ", password=" + password + ", role=" + role + "]";
     }
+    @Override
+    public int compareTo(Customers o) {
+        // TODO Auto-generated method stub
+        return this.getName().compareTo(o.getName());
+    }
     
-=======
-
->>>>>>> b0d4aae7d3e8f96795d0c3eb59a6d83be83ae77f
 }

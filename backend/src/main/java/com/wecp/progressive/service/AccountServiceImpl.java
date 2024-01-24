@@ -1,11 +1,19 @@
 package com.wecp.progressive.service;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
+import com.wecp.progressive.dao.AccountDAO;
 import com.wecp.progressive.entity.Accounts;
 
 public class AccountServiceImpl implements AccountService {
+    private static ArrayList<Accounts> list=new ArrayList<>();
+    private AccountDAO accountdao;
+    public AccountServiceImpl(AccountDAO accountdao){
+        this.accountdao=accountdao;
+    }
 
     @Override
     public List<Accounts> getAllAccounts() throws SQLException {
@@ -58,27 +66,32 @@ public class AccountServiceImpl implements AccountService {
     public List<Accounts> getAllAccountsFromArrayList() {
         // TODO Auto-generated method stub
         //throw new UnsupportedOperationException("Unimplemented method 'getAllAccountsFromArrayList'");
-        return null;
+        
+        return list;
     }
 
     @Override
     public List<Accounts> addAccountToArrayList(Accounts accounts) {
         // TODO Auto-generated method stub
         //throw new UnsupportedOperationException("Unimplemented method 'addAccountToArrayList'");
-        return null;
+        list.add(accounts);
+        return list;
     }
 
     @Override
     public List<Accounts> getAllAccountsSortedByBalanceFromArrayList() {
         // TODO Auto-generated method stub
        // throw new UnsupportedOperationException("Unimplemented method 'getAllAccountsSortedByBalanceFromArrayList'");
-       return null;
+       ArrayList<Accounts> sortedlist=list;
+       Collections.sort(sortedlist);
+       return sortedlist;
     }
 
     @Override
     public void emptyArrayList() {
         // TODO Auto-generated method stub
         //throw new UnsupportedOperationException("Unimplemented method 'emptyArrayList'");
+        list=new ArrayList<>();
     }
 
 }
